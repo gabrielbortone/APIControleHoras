@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APIControleHoras</name>
+    </assembly>
+    <members>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.Get">
+            <summary>
+            Obtem todos os desenvolvedores cadastrados
+            </summary>
+            <returns>Retorna todos desenvolvedores</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.GetRacking(APIDesafio.DTOs.DataCompletaDTO)">
+            <summary>
+            Obtem um os cincos desenvolvedores que mais trabalharam
+            </summary>
+            <returns>Retorna o top 5 desenvolvedores que ultrapassaram a media</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.Get(System.String)">
+            <summary>
+            Obtem um desenvolvedor pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o desenvolvedor pelo seu identificador</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.Post(ApiTeste.DTOs.DesenvolvedorDTO)">
+             <remarks>
+             Exemplo de request:
+            
+                 POST api/desenvolvedor
+                 {
+                 "Nome": "John",
+                  "Sobrenome":"Doe",
+                  "CPF":"12345678911",
+                  "Email":"newgabrielbortone@gmail.com",
+                  "Password": "Senh@121416",
+                  "ConfirmPassword": "Senh@121416"
+                  "LinkedinUrl": "https://www.linkedin.com/in/gabriel-bortone-368564169/",
+                  "GithubUrl": "https://www.linkedin.com/in/gabriel-bortone-368564169/",
+                  "DataContratacao":{
+            	        "Ano": 2020,
+            	        "Mes": 8,
+            	        "Dia" 15
+                  },
+                  "Logradouro": "Rua dos Bobos",
+                  "Numero": 0,
+                  "CEP": "28950000",
+                  "Bairro": "Centro",
+                  "Cidade": "Rio de Janeiro",
+                  "Estado": "Rio de Janeiro",
+                  "País": "Brasil",
+                  "Tipo" : "0 - para celular e 1 para fixo",
+                  "NumeroTelefone": "22999527345"
+                 }
+             </remarks>
+        </member>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.Login(APIDesafio.DTOs.UserInfoDTO)">
+            <summary>
+            Verifica as credenciais de um usuário
+            </summary>
+            <param name="userInfo">Um objeto do tipo UserInfo</param>
+        </member>
+        <member name="M:ApiTeste.Controllers.DesenvolvedorController.Put(System.String,ApiTeste.DTOs.DesenvolvedorDTO)">
+            <summary>
+            Atualiza as informacoes do desenvolvedor pelo id do mesmo
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna um desenvolvedor com as informacoes alteradas</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.Get">
+            <summary>
+            Obtem todas os pontos de horarios que os desenvolvedores trabalharam
+            </summary>
+            <returns>Retorna todos os controles de horários feito pelos programadores</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.GetPonto(System.Int32)">
+            <summary>
+            Obtem um ponto pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o ponto pelo seu identificador</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.GetPontosByDesenvolvedor(System.String)">
+            <summary>
+            Obtem um ponto pelo id do desenvolvedor
+            </summary>
+            <param name="id_Desenvolvedor"></param>
+            <returns>Retorna o ponto pelo identificador do desenvolvedor</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.GetPontosByProjeto(System.Int32)">
+            <summary>
+            Obtem um ponto pelo id do projeto
+            </summary>
+            <param name="id_Projeto"></param>
+            <returns>Retorna o ponto pelo identificador do projeto</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.Post(ApiTeste.DTOs.PontoDTO)">
+             <remarks>
+             Exemplo de request:
+            
+                 POST api/ponto
+                 {
+                 "InicioJornada":{
+                     "Ano": 2020,
+                     "Mes": 8,
+                     "Dia" 15,
+                     "Hora" : 12,
+                     "Minuto" :30
+                 },
+                 "FimJornada":{
+            	        "Ano": 2020,
+            	        "Mes": 8,
+            	        "Dia" 15,
+                     "Hora" : 18,
+                     "Minuto" :30
+                 },
+                 "Id_Desenvolvedor": 1,
+                 "Id_Projeto": 1
+                 }
+             </remarks>
+        </member>
+        <member name="M:ApiTeste.Controllers.PontoController.Put(System.Int32,ApiTeste.Models.Ponto)">
+            <summary>
+            Atualiza um ponto pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o ponto alterado</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.ProjetoController.Get">
+            <summary>
+            Obtem todos os projetos
+            </summary>>
+            <returns>Retorna todos os projetos</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.ProjetoController.GetProjeto(System.Int32)">
+            <summary>
+            Obtem um projeto pelo id
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna um projeto pelo seu identificador</returns>
+        </member>
+        <member name="M:ApiTeste.Controllers.ProjetoController.Post(ApiTeste.DTOs.ProjetoDTO)">
+             <remarks>
+             Exemplo de request:
+            
+                 POST api/projeto
+                 {
+                 "DescricaoCurta": "Descricao curta do projeto",
+                  "DescricaoDetalhada":"Descricao com detalhes sobre o projeto",
+                  "Objetivo":"Objetivos a serem alcançados pelo projeto",
+                  "Recursos":"Recursos que serão usados para se realizar o projeto",
+                  "PublicoAlvo": "A quem se destina o projeto",
+                  "Setor": "Qual setor é o projeto, tipo industrial, tecnologico, etc",
+                  "Fase": 0,
+                  "DataInicio":{
+            	        "Ano": 2020,
+            	        "Mes": 8,
+            	        "Dia": 15
+                  }
+                 }
+             </remarks>
+        </member>
+        <member name="M:ApiTeste.Controllers.ProjetoController.Put(System.Int32,ApiTeste.DTOs.ProjetoDTO)">
+            <summary>
+            Atualiza um projeto pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="projetoVM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.EnderecoController.GetEndereco(System.Int32)">
+            <summary>
+            Obtem um endereco pelo seu id 
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o endereco pelo seu identificador</returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.EnderecoController.GetEnderecoByDesenvolvedor(System.String)">
+            <summary>
+            Obtem um endereco pelo id do desenvolvedor
+            </summary>
+            <param name="id_Desenvolvedor"></param>
+            <returns>Retorna o endereco pelo identificador do desenvolvedor</returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.EnderecoController.Post(ApiTeste.Models.ObjectTypes.Endereco)">
+             <remarks>
+             Exemplo de request:
+            
+                 POST api/endereco
+                 {
+                  "Logradouro": "Rua dos Bobos",
+                  "Numero": 0,
+                  "CEP": "28950000",
+                  "Bairro": "Centro",
+                  "Cidade": "Rio de Janeiro",
+                  "Estado": "Rio de Janeiro",
+                  "País": "Brasil"
+                 }
+             </remarks>
+        </member>
+        <member name="M:APIDesafio.Controllers.EnderecoController.Put(System.Int32,ApiTeste.Models.ObjectTypes.Endereco)">
+            <summary>
+            Atualiza um endereço pelo id do projeto
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna o endereço modificado</returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.TelefoneController.GetTelefone(System.Int32)">
+            <summary>
+            Obtém o telefone pelo id do mesmo
+            </summary>
+            <param name="id">Identificador do telefone</param>
+            <returns>Um telefone</returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.TelefoneController.GetEnderecoByDesenvolvedor(System.String)">
+            <summary>
+            Obtém o telefone pelo id do desenvolvedor
+            </summary>
+            <param name="id_Desenvolvedor">Identificador do desenvolvedor</param>
+            <returns>O endereço de um desenvolvedor</returns>
+        </member>
+        <member name="M:APIDesafio.Controllers.TelefoneController.Post(ApiTeste.Models.ObjectTypes.Telefone)">
+             <remarks>
+             Exemplo de request:
+            
+                 POST api/desenvolvedor
+                 {
+                  "Tipo" : "0 - para celular e 1 para fixo",
+                  "NumeroTelefone": "22999527345"
+                 }
+             </remarks>
+        </member>
+        <member name="M:APIDesafio.Controllers.TelefoneController.Put(System.Int32,ApiTeste.Models.ObjectTypes.Telefone)">
+            <summary>
+            Atualiza um telefone pelo id
+            </summary>
+            <param name="id"></param>
+            <param name="telefone"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

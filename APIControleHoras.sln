@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIControleHoras", "APIDesafio\APIControleHoras.csproj", "{AA9C2A70-2623-4585-BDFE-4F18A76D31F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA9C2A70-2623-4585-BDFE-4F18A76D31F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9C2A70-2623-4585-BDFE-4F18A76D31F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9C2A70-2623-4585-BDFE-4F18A76D31F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9C2A70-2623-4585-BDFE-4F18A76D31F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {186407DD-3B81-4CA6-87E1-22484C76C9CB}
+	EndGlobalSection
+EndGlobal
